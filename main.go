@@ -66,6 +66,7 @@ func stackApp(str string) bool {
 	}
 }
 
+// 最长公前缀
 func sameLongest(str []string) string {
 	s := str[0]
 	if len(s) == 0 {
@@ -82,6 +83,7 @@ func sameLongest(str []string) string {
 	return s
 }
 
+// 交换数字
 func swapData(a, b int) (int, int) {
 	temp := a
 	a = b
@@ -89,6 +91,7 @@ func swapData(a, b int) (int, int) {
 	return a, b
 }
 
+// 交换数字
 func swapData2(a, b int) (int, int) {
 	a = a + b
 	b = a - b
@@ -96,17 +99,20 @@ func swapData2(a, b int) (int, int) {
 	return a, b
 }
 
+// 给定一个数字，求多少个星期多少天
 func getData(num int) (int, int) {
 	week := num / 7
 	day := num % 7
 	return week, day
 }
 
+// 华氏温度转摄氏度
 func temperatureConv(num float64) float64 {
 	celsius := (num - 32) / 1.8
 	return celsius
 }
 
+// 获取0-50之间整除2的数
 func getEvenNumber() {
 	for i := 0; i <= 50; i++ {
 		if i%2 == 0 {
@@ -115,6 +121,7 @@ func getEvenNumber() {
 	}
 }
 
+// 累加
 func accrual(num int) int {
 	sum := 0
 	for i := 1; i <= num; i++ {
@@ -123,6 +130,7 @@ func accrual(num int) int {
 	return sum
 }
 
+// 整除9的数之和及个数
 func multipleFor9AndSum() (int, int) {
 	sum := 0
 	count := 0
@@ -135,6 +143,7 @@ func multipleFor9AndSum() (int, int) {
 	return count, sum
 }
 
+// 阶乘
 func factorial(num int) int {
 	factorial := 1
 	for i := num + 1; i > 0; i-- {
@@ -146,6 +155,7 @@ func factorial(num int) int {
 	return factorial
 }
 
+// 打印矩形
 func rectangle(hight int, width int) {
 	for i := 0; i < hight; i++ {
 		for j := 0; j < width; j++ {
@@ -171,6 +181,7 @@ func removeDuplicates(num []int) (int, []int) {
 	return resultNum, num[:resultNum]
 }
 
+// 加1
 func plusOne(num []int) []int {
 	for i := len(num) - 1; i >= 0; i-- {
 		if num[i] < 9 {
@@ -186,6 +197,9 @@ func plusOne(num []int) []int {
 	return newNum
 }
 
+/*
+* 合并区间
+ */
 func mergeIntervals(num [][]int) [][]int {
 	if len(num) == 1 {
 		return num
@@ -209,6 +223,9 @@ func mergeIntervals(num [][]int) [][]int {
 	return result
 }
 
+/*
+* 两数相加
+ */
 func twoSum(num []int, target int) [][]int {
 	result := [][]int{}
 	for i := 0; i < len(num); i++ {
