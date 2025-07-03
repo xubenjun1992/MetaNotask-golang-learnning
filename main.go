@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"sort"
 	"strconv"
+
+	"main.go/gorm/samplesql"
 )
 
 /*
@@ -239,6 +241,7 @@ func twoSum(num []int, target int) [][]int {
 }
 
 func main() {
-	num := []int{1, 2, 3, 4, 5, 6}
-	fmt.Println(twoSum(num, 9))
+	// num := []int{1, 2, 3, 4, 5, 6}
+	// fmt.Println(twoSum(num, 9))
+	samplesql.TransferAccounts(1, 2, 100)
 }
