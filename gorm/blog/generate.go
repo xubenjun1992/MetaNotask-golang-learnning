@@ -44,7 +44,7 @@ func QueryMostCommentsPost() *entity.Post {
 	var post entity.Post
 	err := core.DB.Model(&entity.Post{}).Table("posts p").Select("p.*, count(1)").Joins("left join comments c on p.id = c.post_id").Group("p.id").Order("count(1) desc").Limit(1).Take(&post).Error
 	if err != nil {
-		log.Panicf("查询错误:%v", err)
+		log.Printf("查询错误:%v", err)
 		return &post
 	}
 	data, _ := json.MarshalIndent(&post, "", "  ")
